@@ -1,0 +1,5 @@
+*.c
+*.cpp
+*.o
+arithmetic_sequence_example_cpp
+arithmetic_sequence_example_c
