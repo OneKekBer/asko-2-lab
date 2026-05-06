@@ -3,3 +3,6 @@
 *.o
 arithmetic_sequence_example_cpp
 arithmetic_sequence_example_c
+/time
+time
+time_test

@@ -22,5 +22,13 @@ test_c: arithmetic_sequence_example_c.o arithmetic_sequence.o
 	gcc -z noexecstack -o arithmetic_sequence_example_c arithmetic_sequence_example_c.o arithmetic_sequence.o
 
 clean:
-	rm -rf *_test *.o arithmetic_sequence_example_c arithmetic_sequence_example_cpp test
+	rm -rf *_test *.o arithmetic_sequence_example_c arithmetic_sequence_example_cpp test time_test
+
+time.o: ./time/time.c
+	gcc -c -Wall -Wextra -std=c23 -O2 -o time.o ./time/time.c
+
+time: time.o arithmetic_sequence.o
+	gcc -z noexecstack arithmetic_sequence.o time.o -o time_test
+
+
 	
